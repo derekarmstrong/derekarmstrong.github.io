@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Derek Armstrong - Resume</title>
+  <meta name="description" content="Resume of Derek Armstrong, Systems Engineer, Software Developer, and IT Architect based in Marietta, Ohio, United States.">
+  <meta name="author" content="Derek Armstrong">
+  <meta property="og:title" content="Derek Armstrong - Resume">
+  <meta property="og:description" content="Diverse systems engineer with a background covering IT architecture, software development, and the content it delivers.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://storage.rxresu.me/clyuregf949kovrn3mmpbaxn3/pictures/r2ll6ahow81zk3qrgoanomhh.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://cv.derekarm.com">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;600&display=swap');
+    :root {
+      --primary: #0284c7;
+      --background: #f7f9fb;
+      --card-bg: #fff;
+      --text: #18181b;
+      --accent: #e0f2fe;
+      --shadow: 0 4px 24px rgba(2, 132, 199, 0.08);
+      --radius: 18px;
+      --toggle-bg: #e0f2fe;
+      --toggle-icon: #0284c7;
+      --secondary: #0369a1;
+      --contrast-bg: #f1f5f9;
+      --contrast-text: #222;
+    }
+    body.dark-mode {
+      --primary: #38bdf8;
+      --background: #101014;
+      --card-bg: #18181b;
+      --text: #f3f4f6;
+      --accent: #0ea5e9;
+      --shadow: 0 4px 24px rgba(56, 189, 248, 0.12);
+      --toggle-bg: #23272f;
+      --toggle-icon: #38bdf8;
+      --secondary: #e0f2fe;
+      --contrast-bg: #23272f;
+      --contrast-text: #f3f4f6;
+    }
+    body {
+      font-family: 'IBM Plex Serif', serif;
+      background: var(--background);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      max-width: 820px;
+      margin: 40px auto;
+      padding: 40px 32px;
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: none;
+      position: relative;
+      overflow: hidden;
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+    .container::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 200px;
+      height: 200px;
+      background: linear-gradient(135deg, var(--primary) 60%, var(--accent) 100%);
+      border-radius: 50%;
+      opacity: 0.15;
+      z-index: 0;
+      transition: background 0.3s;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      margin-bottom: 32px;
+      position: relative;
+      z-index: 1;
+    }
+    .header img {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 2px 12px rgba(2, 132, 199, 0.12);
+      border: 4px solid var(--primary);
+      background: var(--accent);
+    }
+    .name {
+      font-size: 2.4em;
+      font-weight: 600;
+      margin: 0 0 8px 0;
+      letter-spacing: -1px;
+    }
+    .contact {
+      margin-bottom: 12px;
+      font-size: 1.05em;
+      color: var(--text);
+    }
+    .contact a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    .contact a:hover {
+      color: var(--secondary);
+      text-decoration: underline;
+    }
+    .social {
+      margin-top: 8px;
+    }
+    .social a {
+      display: inline-block;
+      margin-right: 12px;
+      color: var(--primary);
+      font-size: 1.2em;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .social a:hover {
+      color: #0369a1;
+    }
+    .section {
+      margin-bottom: 32px;
+      position: relative;
+      z-index: 1;
+    }
+    .section h2 {
+      color: var(--primary);
+      margin-bottom: 12px;
+      font-size: 1.3em;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 4px;
+      background: none;
+      border-radius: 6px 6px 0 0;
+      display: inline-block;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .skills-list, .exp-list, .edu-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .skills-list li {
+      margin-bottom: 14px;
+      background: var(--contrast-bg);
+      color: var(--contrast-text);
+      padding: 12px 16px;
+      border-radius: 10px;
+      box-shadow: 0 1px 4px rgba(2, 132, 199, 0.04);
+      font-size: 1.05em;
+      transition: background 0.3s, color 0.3s;
+    }
+    .skills-list strong {
+      color: var(--primary);
+      text-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    }
+    .exp-list li, .edu-list li {
+      margin-bottom: 20px;
+      background: var(--contrast-bg);
+      color: var(--contrast-text);
+      padding: 14px 18px;
+      border-radius: 10px;
+      box-shadow: 0 1px 4px rgba(2, 132, 199, 0.04);
+      transition: background 0.3s, color 0.3s;
+    }
+    .exp-title {
+      font-weight: bold;
+      font-size: 1.08em;
+      color: var(--primary);
+      text-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    }
+    .exp-company {
+      color: var(--primary);
+      font-weight: 600;
+      margin-left: 4px;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    }
+    .exp-date {
+      font-size: 0.98em;
+      color: var(--text);
+      margin-bottom: 4px;
+      display: block;
+      opacity: 0.8;
+    }
+    .toggle-dark {
+      position: absolute;
+      top: 24px;
+      right: 32px;
+      z-index: 10;
+      background: var(--toggle-bg);
+      border: none;
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(2, 132, 199, 0.08);
+      transition: background 0.3s;
+    }
+    .toggle-dark svg {
+      width: 24px;
+      height: 24px;
+      fill: var(--toggle-icon);
+      transition: fill 0.3s;
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 16px 4px;
+      }
+      .header {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+      }
+      .header img {
+        margin-bottom: 8px;
+      }
+      .toggle-dark {
+        top: 12px;
+        right: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button class="toggle-dark" id="toggleDark" aria-label="Toggle dark mode">
+      <svg id="toggleIcon" viewBox="0 0 24 24">
+        <path d="M12 3a9 9 0 0 0 0 18c4.97 0 9-4.03 9-9 0-4.97-4.03-9-9-9zm0 16a7 7 0 0 1 0-14c.34 0 .67.02 1 .05A7.001 7.001 0 0 0 12 19z"/>
+      </svg>
+    </button>
+    <div class="header">
+      <img src="https://storage.rxresu.me/clyuregf949kovrn3mmpbaxn3/pictures/r2ll6ahow81zk3qrgoanomhh.jpg" alt="Derek Armstrong">
+      <div>
+        <h1 class="name">Derek Armstrong</h1>
+        <div class="contact">
+          <div>Marietta, Ohio, United States</div>
+          <div>Email: <a href="mailto:cv@derekarm.com">cv@derekarm.com</a></div>
+          <div>Phone: +1 740 336 3826</div>
+          <div>
+            <a href="https://github.com/derekarmstrong" target="_blank">GitHub</a> |
+            <a href="https://www.linkedin.com/in/armstrongderek/" target="_blank">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <h2>Summary</h2>
+      <div>Diverse systems engineer with a background covering IT architecture, software development, and the content it delivers. Focused on bringing open-source and enterprise-grade technology systems to the masses.</div>
+    </div>
+    <div class="section">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li><strong>Software Development:</strong> Cross-platform, full-stack web and native app development.<br><em>HTML, CSS, Javascript, NodeJS, C#, .NET, Powershell, SQL, Web Components, DevOps, CI/CD, Native App Publishing, AI Agents, MCP</em></li>
+        <li><strong>Multimedia Production:</strong> Creation and management of media assets including printed material, digital content and video.<br><em>Adobe Creative Cloud, Digital Marketing, Video Production, Print Catalog Design, Digital Advertising</em></li>
+        <li><strong>Information Systems:</strong> Secure and stable management of data across platforms and at scale.<br><em>M365 & Google Admin, Automation, Database Administration, Linux, Windows, Asset Management, Google Cloud, Microsoft Azure, Amazon Web Services, Cloudflare, VoIP</em></li>
+      </ul>
+    </div>
+    <div class="section">
+      <h2>Experience</h2>
+      <ul class="exp-list">
+        <li>
+          <span class="exp-title">Systems Technician & Developer</span> <span class="exp-company">@ IDATP</span><br>
+          <span class="exp-date">June 2024 - Present, Belpre, OH</span><br>
+          <span>Development of full-stack solutions customized to the needs of our non-profit, municipal, and commercial audience</span>
+        </li>
+        <li>
+          <span class="exp-title">Technology Director</span> <span class="exp-company">@ Paradynamix</span><br>
+          <span class="exp-date">April 2022 - December 2023, Marietta, OH</span><br>
+          <span>Built and managed a small team of technicians and software developers</span>
+        </li>
+        <li>
+          <span class="exp-title">Implementation & Support Manager</span> <span class="exp-company">@ Paradynamix</span><br>
+          <span class="exp-date">October 2020 - April 2022, Moultrie, GA</span><br>
+          <span>Researched and implemented IT systems for customers and internal use</span>
+        </li>
+        <li>
+          <span class="exp-title">Web Developer</span> <span class="exp-company">@ BUDK</span><br>
+          <span class="exp-date">October 2018 - June 2020, Moultrie, GA</span><br>
+          <span>Provided full-stack web development of custom .NET e-commerce platform</span>
+        </li>
+        <li>
+          <span class="exp-title">Production Artist</span> <span class="exp-company">@ BUDK</span><br>
+          <span class="exp-date">August 2016 - October 2018, Moultrie, GA</span><br>
+          <span>Created print and digital media assets for use across channels</span>
+        </li>
+        <li>
+          <span class="exp-title">IT Business Analyst</span> <span class="exp-company">@ BUDK</span><br>
+          <span class="exp-date">January 2016 - August 2016, Moultrie, GA, United States</span><br>
+          <span>Supported and developed internal business systems</span>
+        </li>
+      </ul>
+    </div>
+    <div class="section">
+      <h2>Education</h2>
+      <ul class="edu-list">
+        <li>
+          <strong>Wash. Co. Career Center</strong> - Certificate Program, Microsoft IT Academy<br>
+          <span class="exp-date">2009 - 2010</span>
+        </li>
+        <li>
+          <strong>Wash. Co. Career Center</strong> - Technical High School Diploma, Digital Media & Design<br>
+          <span class="exp-date">2008 - 2010</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <script>
+    // Dark mode toggle logic
+    const toggleBtn = document.getElementById('toggleDark');
+    const icon = document.getElementById('toggleIcon');
+    function setDarkMode(on) {
+      document.body.classList.toggle('dark-mode', on);
+      icon.innerHTML = on
+        ? '<path d="M21.64 13.65A9 9 0 0 1 12 3v0a9 9 0 1 0 9 9c0-.34-.02-.67-.05-1a7.001 7.001 0 0 1-7.31 7.31c.33.03.66.05 1 .05a9 9 0 0 0 6.64-4.71z"/>'
+        : '<path d="M12 3a9 9 0 0 0 0 18c4.97 0 9-4.03 9-9 0-4.97-4.03-9-9-9zm0 16a7 7 0 0 1 0-14c.34 0 .67.02 1 .05A7.001 7.001 0 0 0 12 19z"/>';
+    }
+    function getPref() {
+      return localStorage.getItem('darkMode') === 'true';
+    }
+    function setPref(val) {
+      localStorage.setItem('darkMode', val);
+    }
+    toggleBtn.addEventListener('click', () => {
+      const isDark = !document.body.classList.contains('dark-mode');
+      setDarkMode(isDark);
+      setPref(isDark);
+    });
+    // On load, set mode from preference or system
+    (function() {
+      let dark = getPref();
+      if (localStorage.getItem('darkMode') === null) {
+        dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      }
+      setDarkMode(dark);
+    })();
+  </script>
+</body>
+</html>
